@@ -17,7 +17,7 @@
   <main>
     <section class="certificate-stage" aria-labelledby="certificate-title">
       <article class="certificate-shell">
-        <img class="certificate-watermark" src="museum-mark.jpg" alt="" aria-hidden="true">
+        <img class="certificate-watermark" src="museum-mark.jpg" alt="" aria-hidden="true" decoding="async">
 
         <div class="certificate-topline">
           <span>SONG KE INTERNATIONAL ART MUSEUM</span>
@@ -26,7 +26,10 @@
 
         <div class="certificate-hero">
           <div class="certificate-portrait" aria-hidden="true">
-            <img src="song-ke-cutout.png" alt="">
+            <picture>
+              <source srcset="song-ke-cutout.avif" type="image/avif">
+              <img src="song-ke-cutout.png" alt="" fetchpriority="high" decoding="async">
+            </picture>
           </div>
 
           <div class="certificate-main">
@@ -96,7 +99,7 @@
         <span class="frame-corner frame-corner-bl" aria-hidden="true"></span>
         <span class="frame-corner frame-corner-br" aria-hidden="true"></span>
         <div class="video-frame">
-          <video controls playsinline preload="metadata" poster="song-ke-video-poster.png" aria-label="宋轲艺术家官方影像">
+          <video controls playsinline preload="none" poster="song-ke-video-poster.jpg" aria-label="宋轲艺术家官方影像">
             <source src="song-ke-profile.mp4" type="video/mp4">
             您的浏览器暂不支持视频播放。
           </video>
@@ -113,13 +116,13 @@
       </header>
 
       <div class="meeting-list" role="region" aria-label="国际交流合影横向画廊" tabindex="0">
-        <figure class="meeting-card"><div class="meeting-image"><img src="01-hawke.jpg" alt="宋轲与澳大利亚前总理鲍勃·霍克合影" loading="lazy"></div><figcaption><span>01</span><p>澳大利亚前总理鲍勃·霍克</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="02-rudd.jpg" alt="宋轲与澳大利亚前总理陆克文合影" loading="lazy"></div><figcaption><span>02</span><p>澳大利亚前总理陆克文</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="03-hatoyama.jpg" alt="宋轲与日本前首相鸠山由纪夫合影" loading="lazy"></div><figcaption><span>03</span><p>日本前首相鸠山由纪夫</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="04-josipovic.jpg" alt="宋轲与克罗地亚前总统伊沃·约西波维奇合影" loading="lazy"></div><figcaption><span>04</span><p>克罗地亚前总统伊沃·约西波维奇</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="05-vujanovic.jpg" alt="宋轲与黑山共和国前总统菲利普·武亚诺维奇合影" loading="lazy"></div><figcaption><span>05</span><p>黑山共和国前总统菲利普·武亚诺维奇</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="06-shipley.jpg" alt="宋轲与新西兰前总理珍妮·希普利合影" loading="lazy"></div><figcaption><span>06</span><p>新西兰前总理珍妮·希普利</p></figcaption></figure>
-        <figure class="meeting-card"><div class="meeting-image"><img src="07-reinfeldt.jpg" alt="宋轲与瑞典前首相、欧盟前主席弗雷德里克·赖因费尔特合影" loading="lazy"></div><figcaption><span>07</span><p>瑞典前首相、欧盟前主席弗雷德里克·赖因费尔特</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="01-hawke.jpg" alt="宋轲与澳大利亚前总理鲍勃·霍克合影" loading="lazy" decoding="async"></div><figcaption><span>01</span><p>澳大利亚前总理鲍勃·霍克</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="02-rudd.jpg" alt="宋轲与澳大利亚前总理陆克文合影" loading="lazy" decoding="async"></div><figcaption><span>02</span><p>澳大利亚前总理陆克文</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="03-hatoyama.jpg" alt="宋轲与日本前首相鸠山由纪夫合影" loading="lazy" decoding="async"></div><figcaption><span>03</span><p>日本前首相鸠山由纪夫</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="04-josipovic.jpg" alt="宋轲与克罗地亚前总统伊沃·约西波维奇合影" loading="lazy" decoding="async"></div><figcaption><span>04</span><p>克罗地亚前总统伊沃·约西波维奇</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="05-vujanovic.jpg" alt="宋轲与黑山共和国前总统菲利普·武亚诺维奇合影" loading="lazy" decoding="async"></div><figcaption><span>05</span><p>黑山共和国前总统菲利普·武亚诺维奇</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="06-shipley.jpg" alt="宋轲与新西兰前总理珍妮·希普利合影" loading="lazy" decoding="async"></div><figcaption><span>06</span><p>新西兰前总理珍妮·希普利</p></figcaption></figure>
+        <figure class="meeting-card"><div class="meeting-image"><img src="07-reinfeldt.jpg" alt="宋轲与瑞典前首相、欧盟前主席弗雷德里克·赖因费尔特合影" loading="lazy" decoding="async"></div><figcaption><span>07</span><p>瑞典前首相、欧盟前主席弗雷德里克·赖因费尔特</p></figcaption></figure>
       </div>
     </section>
 
