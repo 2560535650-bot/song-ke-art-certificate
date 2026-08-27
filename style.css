@@ -793,7 +793,7 @@ img { display: block; max-width: 100%; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, transparent 56%, rgba(17,16,13,.34) 72%, #11100d 99%),
+    linear-gradient(90deg, transparent 52%, rgba(17,16,13,.28) 70%, rgba(17,16,13,.58) 84%, transparent 100%),
     linear-gradient(0deg, #11100d 0%, rgba(17,16,13,.86) 8%, transparent 30%),
     linear-gradient(180deg, rgba(17,16,13,.14), transparent 28%);
   content: "";
@@ -906,7 +906,7 @@ img { display: block; max-width: 100%; }
 
   .certificate-portrait::after {
     background:
-      linear-gradient(90deg, transparent 34%, rgba(16,15,12,.25) 58%, #100f0c 98%),
+      linear-gradient(90deg, transparent 30%, rgba(16,15,12,.24) 54%, rgba(16,15,12,.62) 77%, transparent 100%),
       linear-gradient(0deg, #100f0c 0%, rgba(16,15,12,.88) 8%, transparent 29%),
       linear-gradient(180deg, rgba(16,15,12,.22), transparent 27%);
   }
