@@ -366,6 +366,8 @@ img { display: block; max-width: 100%; }
   animation: gold-sheen 7s ease-in-out infinite;
 }
 
+.certificate-shell .gold-text { color: transparent; }
+
 .assurance h2 {
   margin: 0;
   font-family: var(--serif);
