@@ -646,6 +646,137 @@ img { display: block; max-width: 100%; }
   line-height: 1.6;
 }
 
+.foundation-portal {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(82px, 10vw, 132px) 24px;
+  border-top: 1px solid rgba(196,154,77,.13);
+  background:
+    radial-gradient(circle at 73% 50%, rgba(181,139,62,.09), transparent 27rem),
+    #0b0a08;
+}
+
+.foundation-portal::before {
+  position: absolute;
+  inset: 8% auto 8% 50%;
+  width: min(58vw, 720px);
+  border-right: 1px solid rgba(195,153,75,.08);
+  border-left: 1px solid rgba(195,153,75,.08);
+  content: "";
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.foundation-portal-panel {
+  position: relative;
+  display: grid;
+  width: min(100%, 940px);
+  margin: 0 auto;
+  padding: clamp(38px, 6vw, 68px);
+  border: 1px solid rgba(205,169,96,.35);
+  background: linear-gradient(135deg, rgba(30,27,21,.8), rgba(13,12,10,.94));
+  box-shadow: 0 34px 90px rgba(0,0,0,.35), inset 0 0 0 10px rgba(205,169,96,.035);
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(34px, 7vw, 82px);
+}
+
+.foundation-portal-panel::after {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(205,169,96,.09);
+  content: "";
+  pointer-events: none;
+}
+
+.foundation-portal-copy { position: relative; z-index: 1; }
+
+.foundation-portal-eyebrow {
+  margin: 16px 0 17px;
+  color: rgba(209,184,132,.42);
+  font-family: Georgia, serif;
+  font-size: 8px;
+  letter-spacing: .3em;
+}
+
+.foundation-portal h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(28px, 4.4vw, 46px);
+  font-weight: 400;
+  letter-spacing: .16em;
+  line-height: 1.4;
+}
+
+.foundation-portal-note {
+  margin: 20px 0 0;
+  color: rgba(225,216,197,.58);
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: .12em;
+  line-height: 1.9;
+}
+
+.foundation-portal-button {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 250px;
+  padding: 22px 66px 22px 24px;
+  overflow: hidden;
+  border: 1px solid rgba(216,180,105,.62);
+  color: #e1c98e;
+  background: linear-gradient(135deg, rgba(145,102,32,.14), rgba(255,236,178,.025));
+  text-decoration: none;
+  transition: border-color .35s ease, background-color .35s ease, transform .35s ease;
+}
+
+.foundation-portal-button::before {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, transparent 20%, rgba(255,233,171,.16) 45%, transparent 68%);
+  content: "";
+  transform: translateX(-115%);
+  animation: portal-sheen 7.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.foundation-portal-button span {
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: .16em;
+}
+
+.foundation-portal-button small {
+  margin-top: 7px;
+  color: rgba(220,199,155,.42);
+  font-family: Georgia, serif;
+  font-size: 6px;
+  letter-spacing: .2em;
+}
+
+.foundation-portal-button i {
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(216,180,105,.36);
+  border-radius: 50%;
+  place-items: center;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-style: normal;
+  transform: translateY(-50%);
+}
+
+.foundation-portal-button:hover {
+  border-color: rgba(234,204,139,.9);
+  background-color: rgba(176,132,56,.07);
+  transform: translateY(-2px);
+}
+
 .site-footer {
   display: flex;
   min-height: 230px;
@@ -688,6 +819,11 @@ img { display: block; max-width: 100%; }
   50% { filter: drop-shadow(0 2px 2px rgba(0,0,0,.58)) drop-shadow(0 0 7px rgba(238,204,125,.42)); }
 }
 
+@keyframes portal-sheen {
+  0%, 52%, 100% { transform: translateX(-115%); }
+  72% { transform: translateX(115%); }
+}
+
 @media (max-width: 620px) {
   .certificate-stage { display: block; min-height: auto; padding: 8px 7px 61px; }
   .certificate-shell { padding: 58px 34px 51px; }
@@ -722,6 +858,10 @@ img { display: block; max-width: 100%; }
   .meetings-heading > p:last-child { line-height: 1.8; }
   .meeting-card { flex-basis: min(62vw, 218px); }
   .meeting-image img { height: 136px; }
+  .foundation-portal { padding: 72px 18px; }
+  .foundation-portal-panel { grid-template-columns: 1fr; padding: 42px 30px; gap: 32px; }
+  .foundation-portal h2 { font-size: 29px; letter-spacing: .12em; }
+  .foundation-portal-button { width: 100%; min-width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
